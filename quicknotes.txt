@@ -613,3 +613,26 @@ Apriori results - running time ~1min
 475 : 663
 478 : 522
 376 : 362
+
+
+——————————————————————————————————————————— 
+fp-tree
+sample data = [ '25', '52', '164', '240', '274', '328', '368', '448', '538', '561', '630', '687', '730', '775', '825', '834' ]
+fp-tree.toString()
+-Name-root : count-0
+--Name-8 : count-1
+--Name-3 : count-5
+---Name-8 : count-1
+---Name-5 : count-1
+----Name-8 : count-1
+---Name-4 : count-1
+----Name-8 : count-1
+--Name-2 : count-6
+---Name-3 : count-1
+----Name-8 : count-1
+---Name-5 : count-3
+----Name-8 : count-1
+---Name-4 : count-2
+--Name-5 : count-2
+--Name-4 : count-2
+---Name-8 : count-1

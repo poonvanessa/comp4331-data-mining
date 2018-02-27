@@ -21,6 +21,7 @@ for key in freqItemsDict.keys():
 
 # TODO1: sort rawDict by key alphabetically and then value
 orderedFreqItemsBySupport = [v[0] for v in sorted(sorted(freqItemsDict.items(), key=lambda q:q[0], reverse=False), key=lambda p: p[1], reverse=True)]
+print orderedFreqItemsBySupport
 # orderedFreqItems => ['8', '2', '3', '4', '5']
 
 # TODO2: create class for 'tree'
@@ -77,9 +78,10 @@ for trans, count in rawDict.iteritems():
             orderedItems.append(item)
     print trans
     print "sorted orderedItems :"
-    print sorted(orderedItems)
+    # print sorted(orderedItems)
+    print sorted(orderedItems, key=lambda x: orderedFreqItemsBySupport.index(x[0]))
     # updating the tree
-    updateTree(sorted(orderedItems), root, count)        
+    updateTree(sorted(orderedItems, key=lambda x: orderedFreqItemsBySupport.index(x[0])), root, count)        
 # for item in orderedFreqItemsBySupport:
 #     root.children[item] = tree(item, root, 0)
 root.toString("-")
